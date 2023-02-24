@@ -27,9 +27,43 @@ int[,] generateMatrix(int row, int col)
     return matrix;
 }
 
-int[,] fillMatrix(int[,]matrix,int row, int col)
+int[,] matrixFlipper(int[,] matrix)
 {
-    //хызы
+    int n = matrix.GetLength(0);
+    int rotationCount = n / 2 +1;
+    int line = 0;
+    int count = 1;
+    for (int i = 0; i < rotationCount; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            for (int k = 0; k < n; k++)
+            {
+                if (matrix[line,k] == 0)
+                {
+                    matrix[line,k] = count++;
+                }
+            }
+            matrix=rotate(matrix);
+        }
+        line++;
+        n=n-1;
+    }
+    return matrix;
+}
+
+int[,] rotate(int[,] matrix)
+{
+    int n = matrix.GetLength(0);
+    int[,] newMatr = new int[n, n];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            newMatr[n - 1 - j, i] = matrix[i, j];
+        }
+    }
+    return newMatr;
 }
 
 void printMatrix(int[,] matrix)
@@ -38,17 +72,29 @@ void printMatrix(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            System.Console.Write(matrix[i, j] + "\t");
+            if(matrix[i, j]<10)
+            {
+                System.Console.Write("0" + matrix[i, j] + "\t");
+            }
+            else
+            {
+                System.Console.Write(matrix[i, j] + "\t");
+            }
+
+            
         }
         System.Console.WriteLine();
     }
 }
 
 
-int row = getNumber("Введите количество строк");
-int col = getNumber("Введите количество столбцов");
+int row = getNumber("Введите размер массива");
+int col = row;
 int[,] matrix = generateMatrix(row, col);
-printMatrix(matrix);
 System.Console.WriteLine();
-fillMatrix(matrix,row,col);
+printMatrix(matrix);
+
+matrix = rotate(matrix);
+System.Console.WriteLine();
+matrix = matrixFlipper(matrix);
 printMatrix(matrix);
