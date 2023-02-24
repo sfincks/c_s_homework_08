@@ -1,0 +1,15 @@
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\bin\Debug\net7.0\Zadacha_04.exe
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\bin\Debug\net7.0\Zadacha_04.deps.json
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\bin\Debug\net7.0\Zadacha_04.runtimeconfig.json
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\bin\Debug\net7.0\Zadacha_04.dll
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\bin\Debug\net7.0\Zadacha_04.pdb
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\Zadacha_04.csproj.AssemblyReference.cache
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\Zadacha_04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\Zadacha_04.AssemblyInfoInputs.cache
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\Zadacha_04.AssemblyInfo.cs
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\Zadacha_04.csproj.CoreCompileInputs.cache
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\Zadacha_04.dll
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\refint\Zadacha_04.dll
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\Zadacha_04.pdb
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\Zadacha_04.genruntimeconfig.cache
+C:\Users\sfinc\OneDrive\Рабочий стол\GB\знакомство с С#\Sem 8\Domashka_08\Zadacha_04\obj\Debug\net7.0\ref\Zadacha_04.dll
