@@ -29,6 +29,7 @@ int[,,] generateMatrix(int x, int y, int z,int min,int max)
     }
     return matrix;
 }
+//массив чисел,заполненный числами по порядку, по которому ищется число и сравнивается с другим
 
 // int[,,] rngMatrix(int[,,] matrix,int min, int max)
 // {
