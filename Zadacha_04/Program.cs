@@ -13,61 +13,53 @@ int getNumber(string text)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int[,,] generateMatrix(int x, int y, int z,int min,int max)
+int[,,] generateMatrix(int[,] array, int x, int y, int z, int min, int max)
 {
-    Random rng = new Random();     
+    Random rng = new Random();
+
     int[,,] matrix = new int[x, y, z];
     for (int i = 0; i < x; i++)
     {
         for (int j = 0; j < y; j++)
         {
             for (int k = 0; k < z; k++)
-            {                
-                matrix[i, j, k] = rng.Next(min, max);
+            {
+                Boolean flag = true;
+                while (flag)
+                {
+                    int r = rng.Next(min, max);
+                    if (array[1, r - min] == 1)
+                    {
+                        matrix[i, j, k] = r;
+                        array[1, r - min] = 0;
+                        flag = false;
+                    }
+                    else if (array[1, r - min] == 0)
+                    {
+
+                    }
+
+                }
             }
         }
     }
     return matrix;
 }
-//массив чисел,заполненный числами по порядку, по которому ищется число и сравнивается с другим
 
-// int[,,] rngMatrix(int[,,] matrix,int min, int max)
-// {
-//     Random rng = new Random();
-//     int [,,] copyOfMatrix= new int[matrix.GetLength(0),matrix.GetLength(1),matrix.GetLength(2)];
-//     // Array.Copy(matrix,copyOfMatrix,matrix.Length);
-//     Array.Fill<int>(copyOfMatrix,,0,matrix.GetLength(0));
-//     for (int i = 0; i < matrix.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < matrix.GetLength(1); j++)
-//         {
-//             for (int k = 0; k < matrix.GetLength(2); k++)
-//             {                
-//                 if(matrix[i,j,k]==copyOfMatrix[i,j,k])
-//                 {
-//                     matrix[i,j,k] = rng.Next(min, max);
-//                 }
-//             }
-//         }
-//     }
-//     return matrix;
-// }
-
-void printMatrix(int[,,] matrix)
+int[,] simpleMatrix(int row, int col)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int sum = 10;
+    int[,] matrix = new int[row, col];
+    Random rng = new Random();
+    for (int i = 0; i < row; i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < col; j++)
         {
-            for (int k = 0; k < matrix.GetLength(2); k++)
-            {
-                System.Console.Write(matrix[i, j, k] + "\t");
-            }
-            System.Console.WriteLine();
+            if (i == 0) { matrix[i, j] = sum; sum++; }
+            else { matrix[i, j] = 1; }
         }
-        System.Console.WriteLine();
     }
-
+    return matrix;
 }
 
 void printIndex(int[,,] matrix)
@@ -86,17 +78,14 @@ void printIndex(int[,,] matrix)
     }
 
 }
+
 int min = 10;
-int max = 30;
+int max = 100;
 int x = getNumber("Введите число первой измерения");
 int y = getNumber("Введите число второго измерения");
 int z = getNumber("Введите число третьего измерения");
 
-int[,,] matrix = generateMatrix(x, y, z,min,max);
-System.Console.WriteLine();
-printMatrix(matrix);
-// System.Console.WriteLine("________________");
-// rngMatrix(matrix);
-// printMatrix(matrix);
+int[,] array = simpleMatrix(2, max - min);
+int[,,] matrix = generateMatrix(array, x, y, z, min, max);
 System.Console.WriteLine();
 printIndex(matrix);

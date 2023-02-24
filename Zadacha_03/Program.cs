@@ -22,7 +22,7 @@ int[,] generateMatrix(int row, int col)
     {
         for (int j = 0; j < col; j++)
         {
-            matrix[i, j] = rng.Next(1, 5);
+            
         }
     }
     return matrix;
